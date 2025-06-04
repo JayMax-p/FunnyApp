@@ -1,0 +1,180 @@
+﻿/* word_recorder/resources/styles/dark.qss */
+QWidget {
+    background-color: #2b2b2b; /* 深色背景 */
+    color: #dcdcdc; /* 浅色文字 */
+    font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+}
+
+QMainWindow, QDialog {
+    background-color: #222222;
+}
+
+QMenuBar {
+    background-color: #3c3c3c;
+    color: #dcdcdc;
+}
+QMenuBar::item:selected {
+    background-color: #555555;
+}
+QMenu {
+    background-color: #2b2b2b;
+    border: 1px solid #4a4a4a;
+}
+QMenu::item:selected {
+    background-color: #0078d7; /* 蓝色高亮 */
+    color: white;
+}
+
+QToolBar {
+    background-color: #333333;
+    border: none;
+    padding: 2px;
+}
+QToolButton {
+    background-color: transparent;
+    padding: 4px;
+    margin: 1px;
+    border-radius: 3px;
+    color: #dcdcdc; /* Ensure toolbar button text is visible */
+}
+QToolButton:hover {
+    background-color: #4f4f4f;
+}
+QToolButton:pressed {
+    background-color: #666666;
+}
+QToolButton:checked { /* 用于主题切换按钮 */
+    background-color: #505050;
+}
+
+
+QLabel#infoBarLabel { /* 主窗口中显示当前词表的Label */
+    background-color: #383838;
+    color: #f0f0f0;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+QTabWidget::pane {
+    border-top: 1px solid #444444;
+    background-color: #303030;
+}
+QTabBar::tab {
+    background-color: #3c3c3c;
+    color: #dcdcdc;
+    padding: 8px 15px;
+    border: 1px solid #444444;
+    border-bottom: none;
+    margin-right: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+QTabBar::tab:selected {
+    background-color: #303030;
+    color: #569cd6; /* 浅蓝色选中文字 */
+    border-bottom: 1px solid #303030;
+}
+QTabBar::tab:hover:!selected {
+    background-color: #4f4f4f;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #3c3f41;
+    color: #dcdcdc;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 5px;
+}
+QLineEdit:focus, QTextEdit:focus {
+    border: 1px solid #0078d7;
+}
+
+QPushButton {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #005a9e;
+}
+QPushButton:pressed {
+    background-color: #004c8a;
+}
+
+QLCDNumber {
+    background-color: #3a3a3a;
+    color: #79aec8; /* LCD数字颜色 */
+    border: 1px solid #4a4a4a;
+}
+
+
+QTableView {
+    background-color: #2b2b2b;
+    color: #dcdcdc;
+    border: 1px solid #444444;
+    gridline-color: #3c3c3c;
+    alternate-background-color: #313131;
+    selection-background-color: #0078d7;
+    selection-color: white;
+}
+
+QTableView QHeaderView::section {
+    background-color: #3c3c3c;
+    color: #dcdcdc;
+    padding: 4px;
+    border: 1px solid #444444;
+    border-bottom: 2px solid #0078d7;
+    font-weight: bold;
+}
+QTableView QHeaderView::section:horizontal {
+    border-top: none;
+    border-left: none;
+}
+QTableView QHeaderView::section:horizontal:first {
+     border-left: 1px solid #444444;
+}
+
+
+QScrollBar:vertical {
+    border: 1px solid #444444;
+    background: #2b2b2b;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: transparent;
+}
+
+QScrollBar:horizontal {
+    border: 1px solid #444444;
+    background: #2b2b2b;
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:horizontal {
+    background: #555555;
+    min-width: 20px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+    background: transparent;
+}
+QFrame[frameShape="5"] { /* QFrame.StyledPanel in AddWordTab */
+    border: 1px solid #4a4a4a;
+    border-radius: 3px;
+    background-color: #303030;
+}
+QLabel {
+    background-color: transparent;
+}

@@ -1,0 +1,181 @@
+﻿/* word_recorder/resources/styles/light.qss */
+QWidget {
+    background-color: #f0f0f0; /* 浅灰色背景 */
+    color: #333333; /* 深灰色文字 */
+    font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif; /* 优先使用微软雅黑或Segoe UI */
+}
+
+QMainWindow, QDialog {
+    background-color: #e8e8e8;
+}
+
+QMenuBar {
+    background-color: #d8d8d8;
+    color: #333333;
+}
+QMenuBar::item:selected {
+    background-color: #c0c0c0;
+}
+QMenu {
+    background-color: #f0f0f0;
+    border: 1px solid #b0b0b0;
+}
+QMenu::item:selected {
+    background-color: #0078d7; /* 蓝色高亮 */
+    color: white;
+}
+
+QToolBar {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 2px;
+}
+QToolButton {
+    background-color: transparent;
+    padding: 4px;
+    margin: 1px;
+    border-radius: 3px;
+}
+QToolButton:hover {
+    background-color: #cceeff; /* 淡蓝色悬停 */
+}
+QToolButton:pressed {
+    background-color: #99ddff;
+}
+QToolButton:checked { /* 用于主题切换按钮 */
+    background-color: #b0b0b0;
+}
+
+
+QLabel#infoBarLabel { /* 主窗口中显示当前词表的Label */
+    background-color: #d0d0d0;
+    color: #222222;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+QTabWidget::pane {
+    border-top: 1px solid #c0c0c0;
+    background-color: #f8f8f8; /* 选项卡页面背景稍浅 */
+}
+QTabBar::tab {
+    background-color: #e0e0e0;
+    color: #333333;
+    padding: 8px 15px;
+    border: 1px solid #c0c0c0;
+    border-bottom: none; /* Tab选中时，底部边框消失 */
+    margin-right: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+QTabBar::tab:selected {
+    background-color: #f8f8f8; /* 选中Tab与Pane背景一致 */
+    color: #005a9e;
+    border-bottom: 1px solid #f8f8f8; /* 关键：覆盖pane的顶部边框 */
+}
+QTabBar::tab:hover:!selected {
+    background-color: #d0d0d0;
+}
+
+QLineEdit, QTextEdit {
+    background-color: white;
+    color: #222222;
+    border: 1px solid #b0b0b0;
+    border-radius: 3px;
+    padding: 5px;
+}
+QLineEdit:focus, QTextEdit:focus {
+    border: 1px solid #0078d7; /* 蓝色焦点边框 */
+}
+
+QPushButton {
+    background-color: #0078d7; /* 蓝色按钮 */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #005a9e; /* 深蓝色悬停 */
+}
+QPushButton:pressed {
+    background-color: #004c8a;
+}
+
+QLCDNumber {
+    background-color: #e0e0e0; /* LCD背景 */
+    color: #003366; /* LCD数字颜色 */
+    border: 1px solid #c0c0c0;
+}
+
+
+QTableView {
+    background-color: white;
+    color: #333333;
+    border: 1px solid #cccccc; /* 表格外边框 */
+    gridline-color: #e0e0e0; /* 网格线颜色 */
+    alternate-background-color: #f9f9f9; /* 交替行背景色 */
+    selection-background-color: #0078d7; /* 选中行背景 */
+    selection-color: white; /* 选中行文字 */
+}
+
+QTableView QHeaderView::section {
+    background-color: #e8e8e8; /* 表头背景 */
+    color: #333333;
+    padding: 4px;
+    border: 1px solid #cccccc;
+    border-bottom: 2px solid #0078d7; /* 表头下边框加粗一点，蓝色 */
+    font-weight: bold;
+}
+
+QTableView QHeaderView::section:horizontal {
+    border-top: none;
+    border-left: none;
+}
+QTableView QHeaderView::section:horizontal:first {
+     border-left: 1px solid #cccccc; /* 第一个表头左边框 */
+}
+
+
+QScrollBar:vertical {
+    border: 1px solid #c0c0c0;
+    background: #f0f0f0;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #a0a0a0;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px; /* 隐藏上下箭头 */
+    background: transparent;
+}
+
+QScrollBar:horizontal {
+    border: 1px solid #c0c0c0;
+    background: #f0f0f0;
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:horizontal {
+    background: #a0a0a0;
+    min-width: 20px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+    background: transparent;
+}
+
+QFrame[frameShape="5"] { /* QFrame.StyledPanel in AddWordTab */
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    background-color: #f8f8f8; /* slight off-white */
+}
+QLabel { /* General labels, specific ones like infoBarLabel are styled separately */
+    background-color: transparent; /* Ensure labels in groups don't get group background */
+}
